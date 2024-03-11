@@ -8,12 +8,13 @@ fastllm_data_type_dict = {
     "int8": 3,
     "float16": 7
 }
+# TODO bfloat
 fastllm_weight_type_dict = {
     "linear": 1,
     "embedding": 2,
     "QuantizedLinear": 111
 }
-
+# TODO bfloat
 def create(model,
            tokenizer = None,
            pre_prompt = None,
@@ -26,6 +27,7 @@ def create(model,
         exit(0);
 
     # 0.1 model info
+    # TODO bfloat
     if model.config.model_type == "chatglm" and model.config.transformers_version == "4.30.2":
         model.config.model_type = "chatglm3"
     modelInfo = model.config.__dict__
@@ -35,6 +37,7 @@ def create(model,
         modelInfo["pre_prompt"] = pre_prompt;
     if (user_role):
         modelInfo["user_role"] = user_role;
+        # TODO bfloat
     if (bot_role):
         modelInfo["bot_role"] = bot_role;
     if (history_sep):
