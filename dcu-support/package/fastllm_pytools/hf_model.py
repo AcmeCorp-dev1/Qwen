@@ -140,6 +140,7 @@ def create(model,
                                                  weight_bits[key],
                                                  dict[key + "_scale"].numpy().astype(np.float32).ctypes.data_as(ctypes.c_void_p),
                                                  dict[key].numpy().ctypes.data_as(ctypes.c_void_p));
+        # TODO bfloat
         else:
             llm.fastllm_lib.add_weight_llm_model(model, weight_name.encode(),
                                              len(dict[key].shape),
@@ -148,8 +149,9 @@ def create(model,
                                              dict[key].numpy().astype(ori_np_data_type).ctypes.data_as(ctypes.c_void_p));
         tot += 1;
         print("convert (", tot, "/", len(dict), end = " )\r");
-
+    # TODO bfloat
     print("");
+    # TODO bfloat
     llm.fastllm_lib.init_params_llm_model(model);
     llm.fastllm_lib.warmup_llm_model(model);
     ret = llm.model("", id = model);
