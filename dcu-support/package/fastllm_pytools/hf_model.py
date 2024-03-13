@@ -18,6 +18,8 @@ fastllm_weight_type_dict = {
     # TODO bfloat
 }
 # TODO bfloat
+# TODO bfloat
+# TODO bfloat
 def create(model,
            tokenizer = None,
            pre_prompt = None,
@@ -31,6 +33,7 @@ def create(model,
         exit(0);
 
     # 0.1 model info
+    # TODO bfloat
     # TODO bfloat
     if model.config.model_type == "chatglm" and model.config.transformers_version == "4.30.2":
         model.config.model_type = "chatglm3"
