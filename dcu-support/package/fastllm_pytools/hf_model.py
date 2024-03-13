@@ -9,10 +9,13 @@ fastllm_data_type_dict = {
     "float16": 7
 }
 # TODO bfloat
+# TODO bfloat
+# TODO bfloat
 fastllm_weight_type_dict = {
     "linear": 1,
     "embedding": 2,
     "QuantizedLinear": 111
+    # TODO bfloat
 }
 # TODO bfloat
 def create(model,
@@ -22,6 +25,7 @@ def create(model,
            bot_role = None,
            history_sep = None,
            dtype = "float16"):
+           # TODO bfloat
     if (dtype not in fastllm_data_type_dict):
         print("dtype should in ", list(fastllm_data_type_dict.keys()));
         exit(0);
