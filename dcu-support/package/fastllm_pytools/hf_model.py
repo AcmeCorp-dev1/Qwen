@@ -38,9 +38,6 @@ def create(model,
     # TODO bfloat
     if model.config.model_type == "chatglm" and model.config.transformers_version == "4.30.2":
         model.config.model_type = "chatglm3"
-        # TODO bfloat
-        # TODO bfloat
-        # TODO bfloat
     modelInfo = model.config.__dict__
     if model.generation_config is not None:
         modelInfo.update(model.generation_config.__dict__)
