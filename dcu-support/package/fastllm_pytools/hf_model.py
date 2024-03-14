@@ -2,7 +2,8 @@ from fastllm_pytools import llm;
 import torch;
 import ctypes;
 import numpy as np;
-
+# TODO bfloat
+# TODO bfloat
 fastllm_data_type_dict = {
     "int4": 8,
     "int8": 3,
