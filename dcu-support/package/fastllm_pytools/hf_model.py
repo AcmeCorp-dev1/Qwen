@@ -56,6 +56,12 @@ fastllm_data_type_dict = {
 # TODO bfloat
 # TODO bfloat
 # TODO bfloat
+# TODO bfloat
+# TODO bfloat
+# TODO bfloat
+# TODO bfloat
+# TODO bfloat
+# TODO bfloat
 fastllm_weight_type_dict = {
     "linear": 1,
     "embedding": 2,
